@@ -1,0 +1,17 @@
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\bin\Debug\GlowProxy.exe.config
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\bin\Debug\GlowProxy.exe
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\bin\Debug\GlowProxy.pdb
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\bin\Debug\Hardcodet.Wpf.TaskbarNotification.dll
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\bin\Debug\Hardcodet.Wpf.TaskbarNotification.pdb
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\bin\Debug\Hardcodet.Wpf.TaskbarNotification.xml
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\obj\Debug\GlowProxy.csprojResolveAssemblyReference.cache
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\obj\Debug\App.g.cs
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\obj\Debug\GlowProxy_MarkupCompile.cache
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\obj\Debug\GlowProxy.g.resources
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\obj\Debug\GlowProxy.Properties.Resources.resources
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\obj\Debug\GlowProxy.csproj.GenerateResource.Cache
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\obj\Debug\GlowProxy.exe
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\obj\Debug\GlowProxy.pdb
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\obj\Debug\Settings.baml
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\obj\Debug\App.baml
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\obj\Debug\Settings.g.cs
