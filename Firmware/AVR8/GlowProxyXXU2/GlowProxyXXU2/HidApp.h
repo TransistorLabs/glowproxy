@@ -17,6 +17,7 @@
 #include "Config/AppConfig.h"
 #include "Config/BoardConfig.h"
 #include "Drivers/Encoder.h"
+#include "Drivers/Leds.h"
 
 #include <LUFA/Drivers/USB/USB.h>
 #include <LUFA/Platform/Platform.h>

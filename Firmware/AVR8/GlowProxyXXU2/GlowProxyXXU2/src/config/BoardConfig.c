@@ -22,17 +22,18 @@ void BoardConfig_Init(void)
 	TCCR1A |=  _BV(COM1B1) | _BV(COM1B0);
 	TCCR1A |=  _BV(COM1C1) | _BV(COM1C0);
 	
-	RED = 0x0000;
-	GRN = 0x0000;
-	BLU = 0x0000;
+	RED = 0x00;
+	GRN = 0x00;
+	BLU = 0x00;
 	
 
 	// Configure port outputs (1)
-	//DDRC |= _BV(PC2) | _BV(PC4) | _BV(PC5) | _BV(PC6) | _BV(PC7);
-	//DDRB |= _BV(PB0) | _BV(PB4) | _BV(PB5) | _BV(PB6) | _BV(PB7);
-	//DDRD |= _BV(PD0) | _BV(PD4) | _BV(PD5) | _BV(PD1) | _BV(PD7);
+
+	DDRD |= _BV(PD0) | _BV(PD7);
+	DDRC |= _BV(PC2) | _BV(PC5) | _BV(PC6) | _BV(PC7);
+	DDRB |= _BV(PB0) |_BV(PB4) | _BV(PB5) |_BV(PB6) |_BV(PB7);
 	
-	// enable PWM - using system clock, no prescaler
+		// enable PWM - using system clock, no prescaler
 	TCCR1B |= _BV(CS10);
 	
 	// Configure the input hardware

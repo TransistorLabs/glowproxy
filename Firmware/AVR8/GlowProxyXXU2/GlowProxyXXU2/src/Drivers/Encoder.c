@@ -7,13 +7,13 @@
 #include "Encoder.h"
 #include "Config/BoardConfig.h"
 
-#define DEBOUNCE_CHECKS		5
+#define BUTTON_DEBOUNCE_CHECKS		5
 
 static void DebounceInputs(void);
 
 volatile static uint8_t debouncedInputState;
 volatile static uint8_t lastDebouncedInputState;
-volatile static uint8_t inputState[DEBOUNCE_CHECKS];
+volatile static uint8_t inputState[BUTTON_DEBOUNCE_CHECKS];
 volatile static uint8_t inputStateIndex = 0;
 
 //This will contain the debounced state of all inputs on the down (press) edge
@@ -68,10 +68,10 @@ void Encoder_Task()
 				}
 
 				rotationState = EncoderRotation_CC;
-				//if(EVENT_EncoderCW > 0)
-				//{
-					//EVENT_EncoderCW();
-				//}
+				if(EVENT_EncoderCW > 0)
+				{
+					EVENT_EncoderCW();
+				}
 			}
 			else if(pins == expectedNextCCW)
 			{
@@ -88,10 +88,10 @@ void Encoder_Task()
 				}
 				rotationState = EncoderRotation_CCW;
 				
-				//if(EVENT_EncoderCCW > 0)
-				//{
-					//EVENT_EncoderCCW();
-				//}
+				if(EVENT_EncoderCCW > 0)
+				{
+					EVENT_EncoderCCW();
+				}
 			}
 			else
 			{
@@ -143,9 +143,9 @@ static void DebounceInputs(void)
 	++inputStateIndex;
 	j = 0xff;
 	
-	for(i=0; i<DEBOUNCE_CHECKS; i++) j = j & inputState[i];
+	for(i=0; i<BUTTON_DEBOUNCE_CHECKS; i++) j = j & inputState[i];
 	
-	//The bit is only set in the debounced variable if it has been on for all iterations of DEBOUNCE_CHECKS
+	//The bit is only set in the debounced variable if it has been on for all iterations of BUTTON_DEBOUNCE_CHECKS
 	// (meaning it's now clean and properly debounced)
 	// The output bits we don't actually care about are &'d out using the BUTTONPORTMASK
 	lastDebouncedInputState = debouncedInputState;
@@ -156,5 +156,5 @@ static void DebounceInputs(void)
 	buttonUp = ~debouncedInputState & lastDebouncedInputState;
 	
 	//circular
-	if(inputStateIndex >= DEBOUNCE_CHECKS) inputStateIndex = 0;
+	if(inputStateIndex >= BUTTON_DEBOUNCE_CHECKS) inputStateIndex = 0;
 }
