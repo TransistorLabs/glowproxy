@@ -8,6 +8,8 @@ src\config\BoardConfig.c
 
 src\Drivers\Encoder.c
 
+src\Drivers\Leds.c
+
 src\TransistorLabs\avr.c
 
 src\TransistorLabs\common.c

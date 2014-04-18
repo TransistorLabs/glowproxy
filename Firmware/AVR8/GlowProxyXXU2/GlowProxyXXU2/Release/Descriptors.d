@@ -6,7 +6,7 @@ Descriptors.d Descriptors.o: .././Descriptors.c .././Descriptors.h \
  d:\program\ files\ (x86)\atmel\atmel\ toolchain\avr8\ gcc\native\3.4.1051\avr8-gnu-toolchain\lib\gcc\avr\4.8.1\include\stddef.h \
  d:\program\ files\ (x86)\atmel\atmel\ toolchain\avr8\ gcc\native\3.4.1051\avr8-gnu-toolchain\avr\include\avr\io.h \
  d:\program\ files\ (x86)\atmel\atmel\ toolchain\avr8\ gcc\native\3.4.1051\avr8-gnu-toolchain\avr\include\avr\sfr_defs.h \
- d:\program\ files\ (x86)\atmel\atmel\ toolchain\avr8\ gcc\native\3.4.1051\avr8-gnu-toolchain\avr\include\avr\iom8u2.h \
+ d:\program\ files\ (x86)\atmel\atmel\ toolchain\avr8\ gcc\native\3.4.1051\avr8-gnu-toolchain\avr\include\avr\iom32u2.h \
  d:\program\ files\ (x86)\atmel\atmel\ toolchain\avr8\ gcc\native\3.4.1051\avr8-gnu-toolchain\avr\include\avr\portpins.h \
  d:\program\ files\ (x86)\atmel\atmel\ toolchain\avr8\ gcc\native\3.4.1051\avr8-gnu-toolchain\avr\include\avr\common.h \
  d:\program\ files\ (x86)\atmel\atmel\ toolchain\avr8\ gcc\native\3.4.1051\avr8-gnu-toolchain\avr\include\avr\version.h \
@@ -132,7 +132,7 @@ d:\program\ files\ (x86)\atmel\atmel\ toolchain\avr8\ gcc\native\3.4.1051\avr8-g
 
 d:\program\ files\ (x86)\atmel\atmel\ toolchain\avr8\ gcc\native\3.4.1051\avr8-gnu-toolchain\avr\include\avr\sfr_defs.h:
 
-d:\program\ files\ (x86)\atmel\atmel\ toolchain\avr8\ gcc\native\3.4.1051\avr8-gnu-toolchain\avr\include\avr\iom8u2.h:
+d:\program\ files\ (x86)\atmel\atmel\ toolchain\avr8\ gcc\native\3.4.1051\avr8-gnu-toolchain\avr\include\avr\iom32u2.h:
 
 d:\program\ files\ (x86)\atmel\atmel\ toolchain\avr8\ gcc\native\3.4.1051\avr8-gnu-toolchain\avr\include\avr\portpins.h:
 

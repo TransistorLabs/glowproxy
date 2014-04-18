@@ -5,7 +5,7 @@
     <ProjectVersion>6.2</ProjectVersion>
     <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
     <ProjectGuid>{944e3a22-9281-4e84-accb-7680aa8e718e}</ProjectGuid>
-    <avrdevice>ATmega8U2</avrdevice>
+    <avrdevice>ATmega32U2</avrdevice>
     <avrdeviceseries>mega</avrdeviceseries>
     <OutputType>Executable</OutputType>
     <Language>C</Language>
@@ -336,6 +336,12 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\Drivers\Encoder.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Drivers\Leds.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Drivers\Leds.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\TransistorLabs\avr.c">

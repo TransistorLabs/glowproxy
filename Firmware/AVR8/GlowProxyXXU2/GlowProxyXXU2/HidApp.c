@@ -48,6 +48,7 @@ int main(void)
 		HID_Device_USBTask(&Generic_HID_Interface);
 		USB_USBTask();
 		Encoder_Task();
+		Leds_Task();
 	}
 }
 
@@ -68,6 +69,7 @@ void HidApp_Init(void)
 					EVENT_EncoderButtonUp, 
 					EVENT_Encoder_CC, 
 					EVENT_Encoder_CCW);
+	Leds_Init();
 }
 
 
