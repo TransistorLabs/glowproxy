@@ -1,0 +1,9 @@
+﻿Build started 4/20/2014 7:56:12 PM.
+     1>Project "C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\ApiTest\ApiTest.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         ApiTest.vcxproj -> C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\Debug\ApiTest.exe
+     1>Done Building Project "C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\ApiTest\ApiTest.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.09

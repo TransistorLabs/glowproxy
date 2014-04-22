@@ -18,7 +18,6 @@ volatile static uint8_t *LedConfig_Ports[BOARDCONFIG_LEDCOUNT]
 			LED4PORT,   LED5PORT,   LED6PORT,   LED7PORT};
 
 static Leds_Frame currentFrame;
-static uint8_t colorSplitThreshold;
 
 volatile static uint8_t *lastPort =	LED0PORT;
 static uint8_t  lastPin =	LED0PIN;
@@ -44,10 +43,7 @@ void Leds_Init(void)
 		setting, so we can go up to BOARDCONFIG_LEDCOUNT colors, and possibly define this
 		via USB feature setting
 	*/
-	colorSplitThreshold = BOARDCONFIG_LEDCOUNT/2;
 	Leds_SetWhite();
-	Leds_SetColor(0, (Leds_Color){.Blue = 0xff});
-	Leds_SetColor(1, (Leds_Color){.Green = 0xff});
 }
 
 // Main task; should be called often, i.e. in a main loop
@@ -55,32 +51,31 @@ void Leds_Task(void)
 {
 	uint8_t i;
 	
-	for(i = 0; i < BOARDCONFIG_LEDCOUNT; i++)
+	for(i = 0; i < 8; i++)
 	{
-		uint8_t bit = currentFrame.LedState.RawData;
+		uint8_t bit = 0xff;
+		uint8_t red = currentFrame.Colors[i].Red;
+		uint8_t green = currentFrame.Colors[i].Green;
+		uint8_t blue = currentFrame.Colors[i].Blue;
 		
-		if(i < colorSplitThreshold)
+		if(red == 0 && green == 0 && blue == 0)
 		{
-			RED	= currentFrame.Colors[0].Red;
-			GRN = currentFrame.Colors[0].Green;
-			BLU = currentFrame.Colors[0].Blue;
-		}
-		else
-		{
-			RED	= currentFrame.Colors[1].Red;
-			GRN = currentFrame.Colors[1].Green;
-			BLU = currentFrame.Colors[1].Blue;
+			bit = 0x00;
 		}
 		
-		bit &= _BV(i);
-		if(bit != 0x00)
+		RED	= red;
+		GRN = green;
+		BLU = blue;
+		
+		//turn off last port-pin combo
+		*lastPort &= ~(_BV(lastPin));
+		
+		if(bit > 0x00)
 		{
 			// Turn on the current LED
 			*LedConfig_Ports[i] |= _BV(LedConfig_Pins[i]);
 		}
 			
-		//turn off last port-pin combo
-		*lastPort &= ~(_BV(lastPin));
 			
 		//Set new last port-pin combo
 		lastPort = LedConfig_Ports[i];
@@ -96,32 +91,28 @@ void Leds_Task(void)
 
 void Leds_Clear(void)
 {
-	currentFrame = (Leds_Frame) {
-		.Colors[0].Red		= 0x00,
-		.Colors[0].Green	= 0x00,
-		.Colors[0].Blue		= 0x00,
-		.Colors[1].Red		= 0x00,
-		.Colors[1].Green	= 0x00,
-		.Colors[1].Blue		= 0x00,
-		.LedState = (Leds_LedState) { .RawData = 0x00 }
-	};
+	
 }
 
 void Leds_SetWhite(void)
 {
-	currentFrame = (Leds_Frame) {
-		.Colors[0].Red		= 0xff,
-		.Colors[0].Green	= 0xff,
-		.Colors[0].Blue		= 0xff,
-		.Colors[1].Red		= 0xff,
-		.Colors[1].Green	= 0xff,
-		.Colors[1].Blue		= 0xff,
-		.LedState = (Leds_LedState) { .RawData = 0xff }
-	};
+	int i = 0;
+	for(i = 0; i < 24; i++)
+	{
+		currentFrame.RawData[i] = 0xff;
+	}
 }
 
 void Leds_SetColor(uint8_t index, Leds_Color color)
 {
+	//if(((color.Red == color.Green) == color.Blue) == 0x00)
+	//{
+		//currentFrame.LedState.RawData &= ~(_BV(index));
+	//}
+	//else
+	//{
+		//currentFrame.LedState.RawData |= _BV(index);	
+	//}
 	currentFrame.Colors[index] = color;
 }
 

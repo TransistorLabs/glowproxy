@@ -1,0 +1,7 @@
+LIBRARY   GlowProxyAPI
+DESCRIPTION "Project GlowFriend API for windows"
+EXPORTS  
+    Init @1
+    Open @2
+    Close @3
+    SetColor @4

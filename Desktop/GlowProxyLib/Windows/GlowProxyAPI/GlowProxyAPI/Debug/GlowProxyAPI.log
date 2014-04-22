@@ -1,0 +1,9 @@
+﻿Build started 4/20/2014 8:30:44 PM.
+     1>Project "C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\GlowProxyAPI\GlowProxyAPI.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         GlowProxyAPI.vcxproj -> C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\Debug\GlowProxyAPI.dll
+     1>Done Building Project "C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\GlowProxyAPI\GlowProxyAPI.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.04

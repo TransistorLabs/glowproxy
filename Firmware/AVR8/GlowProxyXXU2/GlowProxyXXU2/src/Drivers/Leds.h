@@ -11,25 +11,10 @@
 
 #include <avr/common.h>
 #include <stdbool.h>
+#include "config/BoardConfig.h"
 	
 /* Data Structures */
 	
-typedef union
-{
-	struct
-	{
-		uint8_t		Led0	: 1,
-					Led1	: 1,
-					Led2	: 1,
-					Led3	: 1,
-					Led4	: 1,
-					Led5	: 1,
-					Led6	: 1,
-					Led7	: 1;
-	};
-	uint8_t RawData;
-} Leds_LedState;
-
 typedef struct  
 {
 	uint8_t Red;
@@ -37,12 +22,10 @@ typedef struct
 	uint8_t Blue;
 } Leds_Color;
 	
-typedef struct {
-	Leds_Color Colors[2];
-	Leds_LedState LedState;
+typedef union {
+	uint8_t RawData[24];
+	Leds_Color Colors[8];
 } Leds_Frame;
-	
-
 	
 /* Function Prototypes */
 

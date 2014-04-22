@@ -139,6 +139,9 @@ void EVENT_USB_Device_StartOfFrame(void)
  *
  *  \return Boolean \c true to force the sending of the report, \c false to let the library determine if it needs to be sent
  */
+
+uint8_t echo;
+
 bool CALLBACK_HID_Device_CreateHIDReport(USB_ClassInfo_HID_Device_t* const HIDInterfaceInfo,
                                          uint8_t* const ReportID,
                                          const uint8_t ReportType,
@@ -150,6 +153,7 @@ bool CALLBACK_HID_Device_CreateHIDReport(USB_ClassInfo_HID_Device_t* const HIDIn
 
 	Data[0] = buttonState;
 	Data[1] = clockwisePlus;
+	Data[2] = echo;
 	
 	return false;
 }
@@ -168,7 +172,6 @@ void CALLBACK_HID_Device_ProcessHIDReport(USB_ClassInfo_HID_Device_t* const HIDI
                                           const void* ReportData,
                                           const uint16_t ReportSize)
 {
-	//uint8_t* Data       = (uint8_t*)ReportData;
 	
 	if(ReportType == HID_REPORT_ITEM_Feature)
 	{
@@ -176,7 +179,20 @@ void CALLBACK_HID_Device_ProcessHIDReport(USB_ClassInfo_HID_Device_t* const HIDI
 	}
 	else
 	{
-		//TODO: handle incoming color data here
+		GlowProxy_InputReport* reportData = (GlowProxy_InputReport*)ReportData;
+		int i = 0;
+		
+		Leds_Color colorEcho;
+		colorEcho = (*reportData).Leds[0];
+		echo = colorEcho.Green;
+		
+		for(i = 0; i < BOARDCONFIG_LEDCOUNT; i++)
+		{
+			Leds_Color color;
+			color = (*reportData).Leds[i];
+			Leds_SetColor(i, color);
+		}
+		
 	}
 	
 	

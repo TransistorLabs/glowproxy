@@ -26,15 +26,23 @@
 /* Structures */
 	
 typedef union {
-	uint8_t RawData[8];
+	uint8_t RawData[24];
 	struct
 	{
 		uint8_t ButtonState;
 		uint8_t Left;
 		uint8_t Right;
-		uint8_t Debug[5];
+		uint8_t Debug[21];
 	};
-} ATTR_PACKED GlowBean_OutputReport;
+} ATTR_PACKED GlowProxy_OutputReport;
+
+typedef union {
+	uint8_t RawData[24];
+	struct
+	{
+		Leds_Color Leds[8];
+	};
+} ATTR_PACKED GlowProxy_InputReport;
 
 	
 /* Enumerations */
@@ -61,16 +69,17 @@ void EVENT_USB_Device_ConfigurationChanged(void);
 void EVENT_USB_Device_ControlRequest(void);
 void EVENT_USB_Device_StartOfFrame(void);
 
-bool CALLBACK_HID_Device_CreateHIDReport(USB_ClassInfo_HID_Device_t* const HIDInterfaceInfo,
-uint8_t* const ReportID,
-const uint8_t ReportType,
-void* ReportData,
-uint16_t* const ReportSize);
+bool CALLBACK_HID_Device_CreateHIDReport(USB_ClassInfo_HID_Device_t* const	HIDInterfaceInfo,
+                                                            uint8_t* const	ReportID,
+                                                            const uint8_t	ReportType,
+                                                            void*			ReportData,
+                                                            uint16_t* const ReportSize);
+
 void CALLBACK_HID_Device_ProcessHIDReport(USB_ClassInfo_HID_Device_t* const HIDInterfaceInfo,
-const uint8_t ReportID,
-const uint8_t ReportType,
-const void* ReportData,
-const uint16_t ReportSize);
+															const uint8_t	ReportID,
+															const uint8_t	ReportType,
+															const void*		ReportData,
+															const uint16_t	ReportSize);
 
 #endif
 
