@@ -1,0 +1,10 @@
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\ApiTest.Net\bin\Debug\ApiTest.Net.exe.config
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\ApiTest.Net\bin\Debug\GlowProxyAPI.dll
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\ApiTest.Net\bin\Debug\hidapi.dll
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\ApiTest.Net\bin\Debug\ApiTest.Net.exe
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\ApiTest.Net\bin\Debug\ApiTest.Net.pdb
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\ApiTest.Net\bin\Debug\GlowProxyAPI.Net.dll
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\ApiTest.Net\bin\Debug\GlowProxyAPI.Net.pdb
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\ApiTest.Net\obj\Debug\ApiTest.Net.csprojResolveAssemblyReference.cache
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\ApiTest.Net\obj\Debug\ApiTest.Net.exe
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\ApiTest.Net\obj\Debug\ApiTest.Net.pdb

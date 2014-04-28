@@ -11,37 +11,37 @@ int _tmain(int argc, _TCHAR* argv[])
     handle = Open();
     Frame frame;
     
-    frame.Leds[0].Red =     0xff;
-    frame.Leds[0].Green =   0xff;
-    frame.Leds[0].Blue =    0xff;
+    frame.Red[0] =     0xff;
+    frame.Green[0] = 0xff;
+    frame.Blue[0] = 0xff;
     
-    frame.Leds[1].Red =     0xff;
-    frame.Leds[1].Green =   0xff;
-    frame.Leds[1].Blue =    0xff;
+    frame.Red[1] = 0xff;
+    frame.Green[1] = 0xff;
+    frame.Blue[1] = 0xff;
 
-    frame.Leds[2].Red =     0xff;
-    frame.Leds[2].Green =   0xff;
-    frame.Leds[2].Blue =    0xff;
+    frame.Red[2] = 0xff;
+    frame.Green[2] = 0xff;
+    frame.Blue[2] = 0xff;
 
-    frame.Leds[3].Red =     0xff;
-    frame.Leds[3].Green =   0xff;
-    frame.Leds[3].Blue =    0xff;
+    frame.Red[3] = 0xff;
+    frame.Green[3] = 0xff;
+    frame.Blue[3] = 0xff;
 
-    frame.Leds[4].Red =     0x00;
-    frame.Leds[4].Green =   0xff;
-    frame.Leds[4].Blue =    0x00;
+    frame.Red[4] = 0x00;
+    frame.Green[4] = 0xff;
+    frame.Blue[4] = 0x00;
 
-    frame.Leds[5].Red =     0x00;
-    frame.Leds[5].Green =   0xff;
-    frame.Leds[5].Blue =    0x00;
+    frame.Red[5] = 0x00;
+    frame.Green[5] = 0xff;
+    frame.Blue[5] = 0x00;
 
-    frame.Leds[6].Red =     0x00;
-    frame.Leds[6].Green =   0xff;
-    frame.Leds[6].Blue =    0x00;
+    frame.Red[6] = 0x00;
+    frame.Green[6] = 0xff;
+    frame.Blue[6] = 0x00;
 
-    frame.Leds[7].Red =     0x00;
-    frame.Leds[7].Green =   0xff;
-    frame.Leds[7].Blue =    0x00;
+    frame.Red[7] = 0x00;
+    frame.Green[7] = 0xff;
+    frame.Blue[7] = 0x00;
 
     SetColor(handle, frame);
     Close(handle);

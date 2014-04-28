@@ -41,9 +41,9 @@ void SetColor(glowproxy_device* handle, Frame frameData)
 
     for (led = 0; led < 8; led++)
     {
-        buf[++bufferIndex] = frameData.Leds[led].Red;
-        buf[++bufferIndex] = frameData.Leds[led].Green;
-        buf[++bufferIndex] = frameData.Leds[led].Blue;
+        buf[++bufferIndex] = frameData.Red[led];
+        buf[++bufferIndex] = frameData.Green[led];
+        buf[++bufferIndex] = frameData.Blue[led];
     }
 
     

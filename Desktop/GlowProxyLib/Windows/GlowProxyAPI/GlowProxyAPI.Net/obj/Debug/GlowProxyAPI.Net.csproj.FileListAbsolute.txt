@@ -1,0 +1,4 @@
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\GlowProxyAPI.Net\bin\Debug\GlowProxyAPI.Net.dll
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\GlowProxyAPI.Net\bin\Debug\GlowProxyAPI.Net.pdb
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\GlowProxyAPI.Net\obj\Debug\GlowProxyAPI.Net.dll
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\GlowProxyAPI.Net\obj\Debug\GlowProxyAPI.Net.pdb

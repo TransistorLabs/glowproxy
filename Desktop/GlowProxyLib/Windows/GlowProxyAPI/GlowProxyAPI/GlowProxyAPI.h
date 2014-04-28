@@ -18,7 +18,9 @@ extern "C" {
 
     typedef struct
     {
-        Color Leds[8];
+        unsigned char Red[8];
+        unsigned char Green[8];
+        unsigned char Blue[8];
     } Frame;
 
     int Init(void);
