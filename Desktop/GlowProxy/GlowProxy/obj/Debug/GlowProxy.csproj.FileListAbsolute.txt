@@ -19,3 +19,8 @@ C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\bin\Debug\Microsoft.As
 C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\bin\Debug\Newtonsoft.Json.dll
 C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\bin\Debug\Microsoft.AspNet.SignalR.Client.xml
 C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\bin\Debug\Newtonsoft.Json.xml
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\obj\Debug\GlowProxy_Content.g.cs
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\bin\Debug\GlowProxyAPI.dll
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\bin\Debug\hidapi.dll
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\bin\Debug\GlowProxyAPI.Net.dll
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\bin\Debug\GlowProxyAPI.Net.pdb

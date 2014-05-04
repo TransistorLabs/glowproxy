@@ -3,3 +3,5 @@ C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\GlowProx
 C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\GlowProxyAPI.Net\obj\Release\GlowProxyAPI.Net.csprojResolveAssemblyReference.cache
 C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\GlowProxyAPI.Net\obj\Release\GlowProxyAPI.Net.dll
 C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\GlowProxyAPI.Net\obj\Release\GlowProxyAPI.Net.pdb
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\GlowProxyAPI.Net\bin\Release\GlowProxyAPI.dll
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\GlowProxyAPI.Net\bin\Release\hidapi.dll

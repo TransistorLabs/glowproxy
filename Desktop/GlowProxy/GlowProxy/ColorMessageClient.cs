@@ -18,6 +18,14 @@ namespace GlowProxy
         private HubConnection _hubConnection;
         private IHubProxy _proxy;
 
+        public Action OnPing;
+        public Action<string> OnRemoteColorIndexChange;
+
+        public bool Connected
+        {
+            get { return (_hubConnection != null && _hubConnection.State == ConnectionState.Connected); }
+        }
+
         public bool StartClient()
         {
             var cookieContainer = new CookieContainer();
@@ -43,11 +51,19 @@ namespace GlowProxy
                 _hubConnection.CookieContainer = cookieContainer;
                
                 _proxy = _hubConnection.CreateHubProxy("ColorMessageHub");
-                _proxy.On<string>("receiveColorIndex", index => MessageBox.Show(index));
+                _proxy.On<string>("receiveColorIndex", message =>
+                {
+                    if (OnRemoteColorIndexChange != null)
+                    {
+                        OnRemoteColorIndexChange(message);
+                    }
+                });
                 _proxy.On("receivePing", () =>
                 {
-                    MessageBox.Show("pING!");
-                    Debugger.Log(0,"message", "ping");
+                    if (OnPing != null)
+                    {
+                        OnPing();
+                    }
                 });
                 _hubConnection.Start().Wait();
                 Core.ApplicationIcon.ShowBalloonTip("Running!", "Successfully started client service.", BalloonIcon.Info);
@@ -66,8 +82,7 @@ namespace GlowProxy
         public void SendColorIndex(string colorIndex)
         {
             _proxy.Invoke("sendColorIndex", GlowProxy.Properties.Settings.Default.PairedUsername,
-                colorIndex
-                );
+                colorIndex);
         }
 
         public void StopClient()

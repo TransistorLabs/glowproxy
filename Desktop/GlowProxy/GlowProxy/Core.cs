@@ -15,6 +15,7 @@ namespace GlowProxy
         private static Authenticator _authenticator;
         private static ColorMessageClient _colorMessageClient;
         private static TaskbarIcon _tb;
+        private static Device _device;
 
         public static void ShowSettingsWindow()
         {
@@ -31,6 +32,11 @@ namespace GlowProxy
         public static ColorMessageClient ColorMessageClient
         {
             get { return _colorMessageClient ?? (_colorMessageClient = new ColorMessageClient()); }
+        }
+
+        public static Device Device
+        {
+            get { return _device ?? (_device = new Device()); }
         }
 
         public static TaskbarIcon ApplicationIcon

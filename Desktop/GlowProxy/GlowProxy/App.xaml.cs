@@ -7,6 +7,8 @@ using System.Net;
 using System.Threading.Tasks;
 using System.Windows;
 
+using GlowProxyAPI.Net;
+
 using Hardcodet.Wpf.TaskbarNotification;
 
 namespace GlowProxy
@@ -21,6 +23,27 @@ namespace GlowProxy
         {
             //initialize NotifyIcon
             Core.ApplicationIcon = (TaskbarIcon)FindResource("GlowProxyNotifyIcon");
+            Core.Device.Open();
+            Core.Device.StartProcessingInput();
+            Core.Device.OnClick = () =>
+            {
+                if (Core.ColorMessageClient.Connected)
+                {
+                    Core.ColorMessageClient.SendPing();
+                }
+            };
+
+            Core.Device.OnColorChange = (color) =>
+            {
+                if (Core.ColorMessageClient.Connected)
+                {
+                    Core.ColorMessageClient.SendColorIndex(color.ToString());
+                }
+            };
+
+            Core.ColorMessageClient.OnPing = () => Core.Device.BlinkWhite(4);
+            Core.ColorMessageClient.OnRemoteColorIndexChange = (colorString) => Core.Device.SetRemoteColor(new Color(colorString));
+
         }
 
         private void App_OnStartup(object sender, StartupEventArgs e)
