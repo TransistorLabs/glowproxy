@@ -19,6 +19,9 @@ namespace GlowProxyAPI.Net
         [DllImport("GlowProxyAPI.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "Close")]
         internal static extern void _close(IntPtr handle);
 
+        [DllImport("GlowProxyAPI.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "ReadInput")]
+        internal static extern int _readInput(IntPtr handle, ref InputReport report);
+
         public unsafe static Frame GetFrameFromLeds(LedState state)
         {
             var frame = new Frame();
@@ -44,6 +47,12 @@ namespace GlowProxyAPI.Net
         {
             var frame = GetFrameFromLeds(state);
             _setColor(handle, frame);
+        }
+
+        public static int ReadInput(IntPtr handle, ref InputReport inputReport)
+        {
+            var result = _readInput(handle, ref inputReport);
+            return result;
         }
 
         public static void Close(IntPtr handle)

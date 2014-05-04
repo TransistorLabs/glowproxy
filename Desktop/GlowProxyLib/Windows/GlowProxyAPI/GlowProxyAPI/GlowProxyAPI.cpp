@@ -6,6 +6,7 @@
 
 #define VENDOR_ID	0X03EB
 #define	PRODUCT_ID 	0x204f
+#define READWAIT_MS 250
 
 int Init(void)
 {
@@ -25,12 +26,15 @@ glowproxy_device* Open(void)
 
 void Close(glowproxy_device* handle)
 {
+    if (handle == NULL) return;
     hid_close(handle);
     hid_exit();
 }
 
 void SetColor(glowproxy_device* handle, Frame frameData)
 {
+    if (handle == NULL) return;
+
     int res;
     unsigned char buf[25];
     memset(buf, 0, sizeof(buf));
@@ -46,6 +50,22 @@ void SetColor(glowproxy_device* handle, Frame frameData)
         buf[++bufferIndex] = frameData.Blue[led];
     }
 
-    
     res = hid_write(handle, buf, 25);
+}
+
+int ReadInput(glowproxy_device* handle, InputReport* reportBuffer)
+{
+    //TODO: add last-report filtering
+    if (handle == NULL) return -1;
+    int result;
+    unsigned char buffer[25];
+    memset(buffer, 0, sizeof(buffer));
+
+    buffer[0] = 0x00;
+    result = hid_read_timeout(handle, buffer, 25, READWAIT_MS);
+    if (result > 0)
+    {
+        memcpy(reportBuffer, &buffer, 25);
+    }
+    return result;
 }

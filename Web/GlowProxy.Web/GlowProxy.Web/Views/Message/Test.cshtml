@@ -1,13 +1,15 @@
-﻿
-@{
-    ViewBag.Title = "MessageTest";
+﻿@{
+    ViewBag.Title = "Message Test";
 }
 
 
 <h2>Message Echo</h2>
 <div class="container">
-    <input type="text" id="message" />
-    <input type="button" id="sendmessage" value="Send" />
+    You are @User.Identity.Name<br />
+    Target UserID: <input type="text" id="userId"/><br/>
+    <input type="text" id="colorIndex" />
+    <input type="button" id="sendmessage" value="Send" /><br/>
+    <input type="button" id="sendping" value="Send Ping" />
     <ul id="log"></ul>
 </div>
 @section scripts {
@@ -23,16 +25,26 @@
             // Reference the auto-generated proxy for the hub.
             var service = $.connection.colorMessageHub;
             // Create a function that the hub can call back to display messages.
-            service.client.renderTest = function (message) {
+            service.client.receiveColorIndex = function (colorIndex) {
                 // Add the message to the page.
-                $('#log').append('<li>' + htmlEncode(message) + '</li>');
+                $('#log').append('<li> recieving color index:' + htmlEncode(colorIndex) + '</li>');
+            };
+            service.client.receivePing = function () {
+                // Add the message to the page.
+                $('#log').append('<li> recieving ping! </li>');
             };
             $('#message').focus();
             // Start the connection.
             $.connection.hub.start().done(function () {
                 $('#sendmessage').click(function () {
                     // Call the Send method on the hub.
-                    service.server.sendAll($('#message').val());
+                    service.server.sendColorIndex($('#userId').val(), $('#colorIndex').val());
+                    // Clear text box and reset focus for next comment.
+                    $('#message').val('').focus();
+                });
+                $('#sendping').click(function () {
+                    // Call the Send method on the hub.
+                    service.server.sendPing($('#userId').val());
                     // Clear text box and reset focus for next comment.
                     $('#message').val('').focus();
                 });

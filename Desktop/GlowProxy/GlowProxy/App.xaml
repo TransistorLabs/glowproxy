@@ -9,7 +9,8 @@
             <!-- Globally declared notify icon -->
             <tb:TaskbarIcon x:Key="GlowProxyNotifyIcon"
                   IconSource="/Test.ico"
-                  ToolTipText="Hiya world">
+                  ToolTipText="Project Glowfriend" 
+                         TrayMouseDoubleClick="App_OnDoubleClick">
                 <tb:TaskbarIcon.ContextMenu>
                     <ContextMenu Background="White" >
                         <MenuItem Header="Settings" Click="ContextMenuSettings_OnClick" />
