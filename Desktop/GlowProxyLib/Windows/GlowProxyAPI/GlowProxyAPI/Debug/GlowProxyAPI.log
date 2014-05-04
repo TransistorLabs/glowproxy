@@ -1,4 +1,4 @@
-﻿Build started 4/26/2014 10:16:45 AM.
+﻿Build started 5/1/2014 10:33:23 PM.
      1>Project "C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\GlowProxyAPI\GlowProxyAPI.vcxproj" on node 3 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D GLOWPROXYAPI_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\GlowProxyAPI.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt GlowProxyAPI.cpp
@@ -8,8 +8,12 @@
          Debug\GlowProxyAPI.obj
          Debug\stdafx.obj
          GlowProxyAPI.vcxproj -> C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\Debug\GlowProxyAPI.dll
+       PostBuildEvent:
+         copy /Y "C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\Debug\GlowProxyAPI.dll" "..\DLL\GlowProxyAPI.dll"
+         :VCEnd
+                 1 file(s) copied.
      1>Done Building Project "C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\GlowProxyAPI\GlowProxyAPI.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.85
+Time Elapsed 00:00:00.32

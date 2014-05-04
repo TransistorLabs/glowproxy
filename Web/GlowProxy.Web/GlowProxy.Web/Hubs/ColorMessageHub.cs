@@ -6,21 +6,17 @@ using Microsoft.AspNet.SignalR;
 
 namespace GlowProxy.Web.Hubs
 {
+    [Authorize]
     public class ColorMessageHub : Hub
     {
-        public void Send(string connectionId, string message)
+        public void SendColorIndex(string userId, string colorIndex)
         {
-            Clients.Client(connectionId).Send(message);
+            Clients.User(userId).receiveColorIndex(colorIndex);
         }
 
-        public void SendAll(string message)
+        public void SendPing(string userId)
         {
-            Clients.All.renderTest(message);
-        }
-
-        public void Hello()
-        {
-            Clients.All.hello();
+            Clients.User(userId).receivePing();
         }
     }
 }

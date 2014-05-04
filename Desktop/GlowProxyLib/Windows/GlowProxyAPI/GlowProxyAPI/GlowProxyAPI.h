@@ -23,6 +23,14 @@ extern "C" {
         unsigned char Blue[8];
     } Frame;
 
+    typedef struct
+    {
+        unsigned char _reportId;
+        unsigned char Button;
+        unsigned char Rotation;
+        unsigned char Reserved[22];
+    } InputReport;
+
     int Init(void);
 
     glowproxy_device* Open(void);
@@ -30,6 +38,8 @@ extern "C" {
     void Close(glowproxy_device* handle);
 
     void SetColor(glowproxy_device* handle, Frame frameData);
+
+    int ReadInput(glowproxy_device* handle, InputReport* reportBuffer);
 
 #ifdef __cplusplus
 }

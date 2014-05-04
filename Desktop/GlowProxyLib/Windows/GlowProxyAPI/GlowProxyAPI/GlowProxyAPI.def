@@ -5,3 +5,4 @@ EXPORTS
     Open @2
     Close @3
     SetColor @4
+    ReadInput @5

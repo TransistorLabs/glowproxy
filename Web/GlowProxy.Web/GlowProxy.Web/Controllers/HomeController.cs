@@ -12,10 +12,5 @@ namespace GlowProxy.Web.Controllers
         {
             return View();
         }
-
-        public ActionResult MessageTest()
-        {
-            return View();
-        }
     }
 }

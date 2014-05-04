@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using System.Windows;
 
@@ -15,12 +16,11 @@ namespace GlowProxy
     /// </summary>
     public partial class App : Application
     {
-        private TaskbarIcon tb;
 
         private void InitApplication()
         {
             //initialize NotifyIcon
-            tb = (TaskbarIcon)FindResource("GlowProxyNotifyIcon");
+            Core.ApplicationIcon = (TaskbarIcon)FindResource("GlowProxyNotifyIcon");
         }
 
         private void App_OnStartup(object sender, StartupEventArgs e)
@@ -35,8 +35,12 @@ namespace GlowProxy
 
         private void ContextMenuSettings_OnClick(object sender, RoutedEventArgs e)
         {
-            var settingsWindow = new Settings();
-            settingsWindow.Show();
+            Core.ShowSettingsWindow();
+        }
+
+        private void App_OnDoubleClick(object sender, RoutedEventArgs e)
+        {
+            Core.ShowSettingsWindow();
         }
     }
 }

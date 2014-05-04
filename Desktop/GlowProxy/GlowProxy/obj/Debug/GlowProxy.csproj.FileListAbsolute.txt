@@ -15,3 +15,7 @@ C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\obj\Debug\GlowProxy.pd
 C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\obj\Debug\Settings.baml
 C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\obj\Debug\App.baml
 C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\obj\Debug\Settings.g.cs
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\bin\Debug\Microsoft.AspNet.SignalR.Client.dll
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\bin\Debug\Newtonsoft.Json.dll
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\bin\Debug\Microsoft.AspNet.SignalR.Client.xml
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\bin\Debug\Newtonsoft.Json.xml

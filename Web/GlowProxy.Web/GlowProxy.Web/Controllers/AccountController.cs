@@ -62,6 +62,26 @@ namespace GlowProxy.Web.Controllers
         }
 
         //
+        // POST: /Account/Login
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<JsonResult> RemoteLogin(string userName, string password)
+        {
+            var result = false;
+            if (ModelState.IsValid)
+            {
+                var user = await UserManager.FindAsync(userName, password);
+                if (user != null)
+                {
+                    await SignInAsync(user, true);
+                    result = true;
+                }
+            }
+
+            return Json(result);
+        }
+
+        //
         // GET: /Account/Register
         [AllowAnonymous]
         public ActionResult Register()
