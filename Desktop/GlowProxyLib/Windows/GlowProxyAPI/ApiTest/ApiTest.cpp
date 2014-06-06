@@ -16,11 +16,11 @@ int _tmain(int argc, _TCHAR* argv[])
     frame.Blue[0] = 0xff;
     
     frame.Red[1] = 0xff;
-    frame.Green[1] = 0xff;
+    frame.Green[1] = 0x00;
     frame.Blue[1] = 0xff;
 
     frame.Red[2] = 0xff;
-    frame.Green[2] = 0xff;
+    frame.Green[2] = 0x00;
     frame.Blue[2] = 0xff;
 
     frame.Red[3] = 0xff;

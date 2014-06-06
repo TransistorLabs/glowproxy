@@ -8,7 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("glowproxyapi.dll")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("hidapi.dll")]
 
 

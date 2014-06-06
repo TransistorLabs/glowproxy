@@ -5,3 +5,7 @@ C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\GlowProx
 C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\GlowProxyAPI.Net\obj\Release\GlowProxyAPI.Net.pdb
 C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\GlowProxyAPI.Net\bin\Release\GlowProxyAPI.dll
 C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\GlowProxyAPI.Net\bin\Release\hidapi.dll
+E:\Projects\GitHub\glowproxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\GlowProxyAPI.Net\bin\Release\GlowProxyAPI.Net.dll
+E:\Projects\GitHub\glowproxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\GlowProxyAPI.Net\bin\Release\GlowProxyAPI.Net.pdb
+E:\Projects\GitHub\glowproxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\GlowProxyAPI.Net\obj\Release\GlowProxyAPI.Net.dll
+E:\Projects\GitHub\glowproxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\GlowProxyAPI.Net\obj\Release\GlowProxyAPI.Net.pdb
