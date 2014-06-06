@@ -1,19 +1,25 @@
-﻿Build started 5/1/2014 10:33:23 PM.
-     1>Project "C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\GlowProxyAPI\GlowProxyAPI.vcxproj" on node 3 (Build target(s)).
+﻿Build started 5/4/2014 4:21:20 PM.
+     1>Project "E:\Projects\GitHub\glowproxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\GlowProxyAPI\GlowProxyAPI.vcxproj" on node 3 (Rebuild target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D GLOWPROXYAPI_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\GlowProxyAPI.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt GlowProxyAPI.cpp
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D GLOWPROXYAPI_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\GlowProxyAPI.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D GLOWPROXYAPI_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt dllmain.cpp
+         dllmain.cpp
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D GLOWPROXYAPI_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\GlowProxyAPI.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt GlowProxyAPI.cpp
          GlowProxyAPI.cpp
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\Debug\GlowProxyAPI.dll" /INCREMENTAL /NOLOGO C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\\hidapi\hidapi.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /DEF:"GlowProxyAPI.def" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\Debug\GlowProxyAPI.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\Debug\GlowProxyAPI.lib" /MACHINE:X86 /DLL Debug\dllmain.obj
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Projects\GitHub\glowproxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\Debug\GlowProxyAPI.dll" /INCREMENTAL /NOLOGO E:\Projects\GitHub\glowproxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\\hidapi\hidapi.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /DEF:"GlowProxyAPI.def" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Projects\GitHub\glowproxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\Debug\GlowProxyAPI.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Projects\GitHub\glowproxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\Debug\GlowProxyAPI.lib" /MACHINE:X86 /DLL Debug\dllmain.obj
          Debug\GlowProxyAPI.obj
          Debug\stdafx.obj
-         GlowProxyAPI.vcxproj -> C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\Debug\GlowProxyAPI.dll
+     1>GlowProxyAPI.def(2): warning LNK4017: DESCRIPTION statement not supported for the target platform; ignored
+            Creating library E:\Projects\GitHub\glowproxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\Debug\GlowProxyAPI.lib and object E:\Projects\GitHub\glowproxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\Debug\GlowProxyAPI.exp
+         GlowProxyAPI.vcxproj -> E:\Projects\GitHub\glowproxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\Debug\GlowProxyAPI.dll
        PostBuildEvent:
-         copy /Y "C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\Debug\GlowProxyAPI.dll" "..\DLL\GlowProxyAPI.dll"
+         copy /Y "E:\Projects\GitHub\glowproxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\Debug\GlowProxyAPI.dll" "..\DLL\GlowProxyAPI.dll"
          :VCEnd
                  1 file(s) copied.
-     1>Done Building Project "C:\projects\Trandem\GlowProxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\GlowProxyAPI\GlowProxyAPI.vcxproj" (Build target(s)).
+     1>Done Building Project "E:\Projects\GitHub\glowproxy\Desktop\GlowProxyLib\Windows\GlowProxyAPI\GlowProxyAPI\GlowProxyAPI.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.32
+Time Elapsed 00:00:01.51
