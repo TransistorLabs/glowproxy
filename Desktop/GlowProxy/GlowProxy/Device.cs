@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 using GlowProxyAPI.Net;
@@ -47,6 +48,7 @@ namespace GlowProxy
             _handle = GlowProxyAPI.Net.GlowProxy.Open();
         }
 
+        CancellationTokenSource cts;
         public async void StartProcessingInput()
         {
             _isRunning = true;
@@ -56,9 +58,10 @@ namespace GlowProxy
             }
         }
 
-        public void PauseProcessingInput()
+        public void StopProcessingInput()
         {
             _isRunning = false;
+
         }
 
         public void Close()
@@ -217,7 +220,7 @@ namespace GlowProxy
                 return;
             }
 
-            PauseProcessingInput();
+            StopProcessingInput();
 
             for (var i = 0; i < count; i++)
             {

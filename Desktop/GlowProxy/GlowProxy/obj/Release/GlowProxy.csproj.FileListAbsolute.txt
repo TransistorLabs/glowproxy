@@ -23,3 +23,4 @@ C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\obj\Release\GlowProxy.
 C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\obj\Release\GlowProxy.csproj.GenerateResource.Cache
 C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\obj\Release\GlowProxy.exe
 C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\obj\Release\GlowProxy.pdb
+C:\projects\Trandem\GlowProxy\Desktop\GlowProxy\GlowProxy\obj\Release\GlowProxy.csprojResolveAssemblyReference.cache
