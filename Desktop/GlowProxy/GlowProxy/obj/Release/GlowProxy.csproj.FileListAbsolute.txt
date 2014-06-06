@@ -45,3 +45,4 @@ E:\Projects\GitHub\glowproxy\Desktop\GlowProxy\GlowProxy\obj\Release\GlowProxy.g
 E:\Projects\GitHub\glowproxy\Desktop\GlowProxy\GlowProxy\obj\Release\GlowProxy.Properties.Resources.resources
 E:\Projects\GitHub\glowproxy\Desktop\GlowProxy\GlowProxy\obj\Release\GlowProxy.csproj.GenerateResource.Cache
 E:\Projects\GitHub\glowproxy\Desktop\GlowProxy\GlowProxy\obj\Release\GlowProxy.exe
+E:\Projects\GitHub\glowproxy\Desktop\GlowProxy\GlowProxy\obj\Release\GlowProxy.csprojResolveAssemblyReference.cache
